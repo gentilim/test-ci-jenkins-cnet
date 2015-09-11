@@ -18,5 +18,16 @@ namespace TestCIJenkinsUnitTests
 
             Assert.AreEqual("Command: [print] processed\r\n", testTextWriter.GetStringBuilder().ToString());
         }
+
+        [TestMethod]
+        public void Main__Given_MultipleCommands__Then_ReportIssue()
+        {
+            var testTextWriter = new StringWriter();
+            Console.SetOut(testTextWriter);
+
+            Program.Main(new[] { "print", "me" });
+
+            Assert.AreEqual("Unknown command\r\n", testTextWriter.GetStringBuilder().ToString());
+        }
     }
 }
