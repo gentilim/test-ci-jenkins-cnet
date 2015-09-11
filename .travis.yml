@@ -1,2 +1,2 @@
 language: csharp
-solution: TestCIJenkins\TestCIJenkins.sln
+solution: TestCIJenkins/TestCIJenkins.sln
