@@ -14,7 +14,7 @@ namespace TestCIJenkins
 
             if (args[0].Equals("exit", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Goodbye");
+                Console.WriteLine("Goodbye :(");
                 return;
             }
 
