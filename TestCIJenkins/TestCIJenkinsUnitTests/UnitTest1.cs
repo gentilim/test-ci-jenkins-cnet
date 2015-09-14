@@ -27,7 +27,7 @@ namespace TestCIJenkinsUnitTests
 
             Program.Main(new[] { "print", "me" });
 
-            Assert.AreEqual("Unknown command\r\n", testTextWriter.GetStringBuilder().ToString());
+            Assert.AreEqual("Unknown command\r\nblah", testTextWriter.GetStringBuilder().ToString());
         }
     }
 }
