@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using TestCIJenkins;
+using NUnit.Framework;
 
 namespace TestCIJenkinsUnitTests
 {
-    [TestClass]
+    [TestFixture]
     public class ProgramTests
     {
-        [TestMethod]
+        [Test]
         public void Main__Given_SingleCommand__Then_PrintCommandProcessed()
         {
             var testTextWriter = new StringWriter();
@@ -19,7 +19,7 @@ namespace TestCIJenkinsUnitTests
             Assert.AreEqual("Command: [print] processed\r\n", testTextWriter.GetStringBuilder().ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void Main__Given_MultipleCommands__Then_ReportIssue()
         {
             var testTextWriter = new StringWriter();
